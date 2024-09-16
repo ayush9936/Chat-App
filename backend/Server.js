@@ -8,13 +8,14 @@ import userRoutes from "./routes/userRoutes.js";
 
 import connect_TO_mdb from "./db/db.js";
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-
 dotenv.config();
+const app = express();
+const PORT = process.env.PORT || 8000;
+
+
 //this middleware access the json data from req body
 app.use(express.json());
+
 app.use(cookieParser());
 
 //this is middleware for routing
